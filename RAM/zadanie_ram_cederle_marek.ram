@@ -1,0 +1,21 @@
+//ram projekt 17
+
+start:
+	READ 0
+	JZERO end //ukoncenie nulou
+
+	ADD 2
+	STORE 2
+	//counter
+	LOAD 1
+	ADD =1
+	STORE 1
+	JUMP start
+end:
+	WRITE 1
+	LOAD 2
+	JZERO zero_div
+	DIV 1
+zero_div:
+	WRITE 0
+	ACCEPT
